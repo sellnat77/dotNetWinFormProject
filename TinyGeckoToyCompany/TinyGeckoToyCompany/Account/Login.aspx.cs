@@ -41,7 +41,7 @@ namespace TinyGeckoToyCompany.Account
                         TinyGeckoToyCompany.Logic.ShoppingCartActions usersShoppingCart = new TinyGeckoToyCompany.Logic.ShoppingCartActions();
                         String cartId = usersShoppingCart.GetCartId();
                         usersShoppingCart.MigrateCart(cartId, Email.Text);
-                        IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+                        IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnURL"], Response);
                         break;
                     case SignInStatus.LockedOut:
                         Response.Redirect("/Account/Lockout");
