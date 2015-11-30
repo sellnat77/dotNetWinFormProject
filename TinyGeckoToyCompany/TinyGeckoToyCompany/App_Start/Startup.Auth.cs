@@ -59,11 +59,11 @@ namespace TinyGeckoToyCompany
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "886019212197-l3te136svu45q4cbvviim2lhqqcon56p.apps.googleusercontent.com",
+                ClientSecret = "ihI1rYr0Z1MF3vOFD0AG1Fno"
+            });
         }
     }
 }
