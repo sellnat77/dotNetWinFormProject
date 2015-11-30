@@ -7,7 +7,7 @@
         SelectMethod="GetProviderNames" ViewStateMode="Disabled">
         <ItemTemplate>
             <p>
-                <button type="submit" class="btn btn-default" name="provider" value="<%#: Item %>"
+                <button style ="background: url(http://commondatastorage.googleapis.com/io-2013/presentations/808/images/sign-in-button.png)" type="submit"  class="btn btn-default" name="provider" value="<%#: Item %>"
                     title="Log in using your <%#: Item %> account.">
                     <%#: Item %>
                 </button>
