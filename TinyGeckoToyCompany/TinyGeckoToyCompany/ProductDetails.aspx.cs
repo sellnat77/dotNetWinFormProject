@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using TinyGeckoToyCompany.Models;
+using System.Web.ModelBinding;
 
 namespace TinyGeckoToyCompany
 {
@@ -13,5 +15,21 @@ namespace TinyGeckoToyCompany
         {
 
         }
+
+        public IQueryable<Product> GetProduct([QueryString("productID")] int? productId)
+        {
+            var _db = new TinyGeckoToyCompany.Models.ProductContext();
+            IQueryable<Product> query = _db.Products;
+            if (productId.HasValue && productId > 0)
+            {
+                query = query.Where(p => p.ProductID == productId);
+            }
+            else
+            {
+                query = null;
+            }
+            return query;
+        }
+
     }
 }
