@@ -42,6 +42,11 @@ namespace TinyGeckoToyCompany.Models
                     CategoryID = 5,
                     CategoryName = "Rockets"
                 },
+                new Category
+                {
+                    CategoryID = 6,
+                    CategoryName = "Geckos"
+                },
             };
 
             return categories;
@@ -197,6 +202,24 @@ namespace TinyGeckoToyCompany.Models
                     ImagePath="rocket.png",
                     UnitPrice = 122.95,
                     CategoryID = 5
+                },
+                new Product
+                {
+                    ProductID = 17,
+                    ProductName = "Tiny Gecko",
+                    Description = "This tiny gecko will surely impress your child when they see how fun it is!",
+                    ImagePath="tinygecko.png",
+                    UnitPrice = 12.95,
+                    CategoryID = 6
+                },
+                new Product
+                {
+                    ProductID = 18,
+                    ProductName = "Standard Gecko",
+                    Description = "This standard sized gecko will decorate your lawn and fend off trespassers!",
+                    ImagePath="stdgecko.png",
+                    UnitPrice = 110.99,
+                    CategoryID = 6
                 }
             };
 

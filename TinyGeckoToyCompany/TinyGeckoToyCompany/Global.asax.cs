@@ -8,6 +8,7 @@ using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
 using TinyGeckoToyCompany.Models;
+using TinyGeckoToyCompany.Logic;
 
 namespace TinyGeckoToyCompany
 {
@@ -21,6 +22,10 @@ namespace TinyGeckoToyCompany
 
             //Initialize the database
             Database.SetInitializer(new ProductDatabaseInitializer());
+
+            // Create the custom role and user.
+            RoleActions roleActions = new RoleActions();
+            roleActions.AddUserAndRole();
         }
     }
 }
